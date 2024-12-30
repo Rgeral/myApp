@@ -10,6 +10,8 @@ if [ $? -eq 0 ]; then
 
   cd ../frontend || { echo "Erreur : impossible de se déplacer dans le répertoire frontend"; exit 1; }
   echo "Exécution de npm run build..."
+  npm install
+  npm install -g @angular/cli |
   npm run build
 
   if [ $? -eq 0 ]; then
